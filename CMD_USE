@@ -1,13 +1,1 @@
-
-$ cd apache2/sites-enabled/
-$ rm 000-default.conf
-
-$ cd /etc/apache2/sites-available/
-$ vim toto.conf
-
-$ cd /etc/apache2/sites-enables/
-$ ln -s ../sites-available/toto.conf .
-
-$ vim /etc/apache2/apache2.conf
-
-$ /etc/init.d/apache2 restart
+# STEP 1
