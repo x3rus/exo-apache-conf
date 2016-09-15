@@ -2,3 +2,5 @@ hosts
 passwd
 shadow
 groups
+hostname
+resolv.conf
