@@ -1,1 +1,11 @@
 # STEP 2
+
+* Creation vhost
+vim /etc/apache2/sites-aviables/medias.conf
+
+* activation
+cd /etc/apache2/sites-enabled/
+ln -s ../sites-aviables/medias.conf .
+
+* Ajout du port d'ecoute pour le port 8080
+vim /etc/apache2/ports.conf
