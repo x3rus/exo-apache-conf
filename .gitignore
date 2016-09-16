@@ -5,3 +5,4 @@ groups
 hostname
 resolv.conf
 .pwd.lock
+wgetrc
