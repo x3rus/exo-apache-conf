@@ -6,3 +6,9 @@ hostname
 resolv.conf
 .pwd.lock
 wgetrc
+ImageMagick
+alternatives
+fonts
+ghostscript
+papersize
+mailcap
