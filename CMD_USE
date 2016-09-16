@@ -9,3 +9,9 @@ ln -s ../sites-aviables/medias.conf .
 
 * Ajout du port d'ecoute pour le port 8080
 vim /etc/apache2/ports.conf
+
+* Mise en place de 2 solution de rewrite , avec mod_rewrite ET redirectmatch 
+/etc/apache2/sites-aviables/toto.conf
+
+* Activation du mod_rewrite
+a2enmod rewrite
