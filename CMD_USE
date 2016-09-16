@@ -1,9 +1,1 @@
-# STEP 1
-
-$ vim /etc/apache2/sites-available/toto.conf
-
-* Activation du module
-a2enmod authz_groupfile
-
-* restart apache
-/etc/init.d/apache2 restart
+# STEP 2
