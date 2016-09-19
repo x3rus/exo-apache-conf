@@ -1,2 +1,38 @@
 # STEP 4
 
+* Creation de la clef 
+
+$ openssl req -x509 -nodes -newkey rsa:2048 -keyout toto_example_com.key -out toto_example_com.crt -days 3>
+Generating a 2048 bit RSA private key
+.........................+++
+............................+++
+writing new private key to 'toto_example_com.key'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CA
+State or Province Name (full name) [Some-State]:Quebec
+Locality Name (eg, city) []:Montreal
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:X3rus
+Organizational Unit Name (eg, section) []:Training
+Common Name (e.g. server FQDN or YOUR name) []:toto.example.com
+
+* Copy et ajustement des permission
+$ cp * /etc/apache2/ssl/
+$ chmod u=rX,g=,o= -R /etc/apache2/ssl/ 
+
+* Activation du module ssl
+
+$ a2enmod ssl
+
+* Edition du fichier toto-ssl 
+$ vim /etc/apache2/sites-availables/toto-ssl.conf 
+
+* Activation de ce dernier 
+$ cd /etc/apache2/sites-enabled/ 
+$ ln -s ../sites-available/toto-ssl.conf .
